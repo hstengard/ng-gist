@@ -1,0 +1,17 @@
+<div id="add-file-{{gist.id}}" class="add-box fade none" ng-class="{in: gist.addFile, disp: gist.addFile}">
+    <div class="add add-left">
+        <h4>Add file</h4>
+        <small>File will be added with a default content</small>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="filename">File name</label>
+                <input id="filename" class="form-control" type="text" ng-model="filename"
+                       placeholder="file name"/>
+            </div>
+            <div class="pull-right">
+                <button class="btn pink-button" ng-click="addFile()">Save</button>
+                <button class="btn default" ng-click="gist.addFile = false">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

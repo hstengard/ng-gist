@@ -1,0 +1,255 @@
+@import '../../vendor/bootstrap/less/bootstrap.less';
+@import '../../vendor/components-font-awesome/less/font-awesome.less';
+@import 'variables.less';
+
+.rounded-borders(@roundness) {
+  border-radius: @roundness;
+  -moz-border-radius: @roundness;
+  -webkit-border-radius: @roundness;
+}
+
+.rounded-borders-specific(@top, @right, @bottom, @left) {
+  border-radius: @top @right @bottom @left;
+  -moz-border-radius: @top @right @bottom @left;
+  -webkit-border-radius: @top @right @bottom @left;
+}
+
+.border-box() {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background-color: #fffcf6;
+  color: @text-color;
+  padding-top: 20px;
+}
+
+a {
+  color: @text-color;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ed2979;
+}
+
+#login-screen {
+  height: 100%;
+  width: 100%;
+}
+
+.login {
+  .rounded-borders(4px);
+  border: 1px solid #ece5de;
+  border-bottom: 4px solid #ece5de;
+  padding: 15px;
+  margin-top: 100px;
+  background-color: #f7f3ec;
+  i {
+    display: inline-block;
+    color: #c0b5ac;
+    font-size: 120px;
+    margin: 20px auto;
+  }
+
+  input {
+    border: 1px solid #ece5de;
+    border-top: 2px solid #ece5de;
+  }
+}
+
+.pink-button {
+  background-color: #ed2979;
+  border-bottom: 1px solid #be2261;
+  color: #fff;
+}
+
+.pink {
+  color: #ed2979;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.user-info {
+  li {
+    list-style: none;
+  }
+  .avatar {
+    max-height: 50px;
+    max-width: 50px;
+  }
+}
+
+.gist-wrapper {
+  margin-bottom: 15px;
+}
+
+.action {
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+.disp {
+  display: block;
+}
+
+.add-box {
+  position: absolute;
+  z-index: 1200;
+.add {
+  position: relative;
+  background: #fffcf6;
+  border: 4px solid #dcd2ca;
+  min-width: 400px;
+  padding: 5px;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  .rounded-borders(4px);
+  .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  form:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+  .add-left {
+     margin-left: -400px;
+  }
+}
+
+
+
+/* Bootstrap override */
+.tab-pane {
+  .rounded-borders-specific(2px, 2px, 0, 2px);
+  padding: 5px;
+  border: 1px solid #dcd2ca;
+  border-top-width: 3px;
+}
+
+.tab-content {
+  .rounded-borders-specific(4px, 4px, 0, 0);
+  padding: 5px;
+  border-top: 1px solid #dcd2ca;
+  border-right: 1px solid #dcd2ca;
+  border-left: 1px solid #dcd2ca;
+}
+
+.nav-tabs {
+  border-top: 4px solid #dcd2ca;
+  border-bottom: 0px transparent;
+}
+
+.nav-tabs > li {
+  float: left;
+  margin-top: -4px;
+  margin-bottom: 0;
+}
+
+.nav-tabs > li > a,
+.nav-tabs > li > input {
+  margin-right: 0;
+  line-height: 1.428571429;
+  border-top-color: transparent;
+  border-left: 1px solid #dcd2ca;
+  border-bottom: 1px solid #dcd2ca;
+  border-right: 0px;
+  .rounded-borders(0);
+  text-decoration: none;
+}
+
+.nav-tabs > li > a:hover {
+  border-color: #dcd2ca #dcd2ca #dcd2ca;
+}
+
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: #fffcf6;
+  color: #ed2979;
+  border-top: 4px solid #dcd2ca;
+  padding-top: 7px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus{
+  .rounded-borders-specific(0, 0, 0, 4px);
+  color: #ed2979;
+  cursor: default;
+  border-left: 1px solid #dcd2ca;
+  border-bottom: 4px solid #dcd2ca;
+  background-color: #fffcf6;
+  border-top-color: transparent;
+  padding: 9px 15px;
+}
+
+.nav-tabs > li > input {
+  .rounded-borders-specific(0, 0, 0, 4px);
+  color: #ed2979;
+  cursor: default;
+  border-left: 1px solid #dcd2ca;
+  border-bottom: 4px solid #dcd2ca;
+  background-color: #fff;
+  border-top-color: transparent;
+  height: 41px;
+}
+
+.nav-tabs > li.git-link > a {
+  border-bottom: 1px solid transparent;
+  text-decoration: underline;
+}
+
+.nav-tabs > li.git-link > a:hover {
+  border-top: 4px solid #dcd2ca;
+  border-left: 1px solid #dcd2ca;
+  padding-top: 7px;
+}
+
+.nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+
+.nav-tabs.nav-justified > li {
+  float: none;
+}
+
+.nav-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+
+.editor {
+  font-family: "Courier New";
+  background-color: #fffcf6;
+  border: none;
+  width: 100%;
+  min-height: 200px;
+  line-height: 1.3;
+  white-space: pre;
+  color: @text-color;
+  resize: none;
+  .border-box();
+}
+
+.editor:focus {
+  background-color: #FFF;
+}

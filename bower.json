@@ -1,0 +1,21 @@
+{
+  "name": "ng-gist",
+  "version": "0.0.1",
+  "main": "app/app.js",
+  "ignore": [
+    "node_modules",
+    "components"
+  ],
+    "devDependencies" : {
+        "jquery" : "2.0.3",
+        "underscore" : "1.5.2",
+        "restangular" : "1.2.2",
+        "bootstrap" : "3.0.3",
+        "angular": "1.2.9",
+        "angular-route": "1.2.9",
+        "angular-mocks": "1.2.9",
+        "angular-animate" : "1.2.9",
+        "json3": "~3.2.6",
+        "components-font-awesome" : "4.0.3"
+    }
+}

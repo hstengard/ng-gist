@@ -1,0 +1,28 @@
+<div class="add-box fade none" ng-class="{in: display, disp: display}">
+    <div class="add">
+        <h4>Create new gist</h4>
+        <small>Gist will be created with a default content</small>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="description">Description</label>
+                <input id="description" class="form-control" type="text" ng-model="gist.description"
+                       placeholder="description"/>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="filename">File name</label>
+                <input id="filename" class="form-control" type="text" ng-model="gist.filename"
+                       placeholder="first file name"/>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="gist.public"/> Public
+                </label>
+            </div>
+            <div class="pull-right">
+                <button class="btn pink-button" ng-click="create()">Save</button>
+                <button class="btn default" ng-click="cancelNew()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

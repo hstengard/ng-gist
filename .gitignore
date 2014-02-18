@@ -1,0 +1,6 @@
+build/
+bin/
+vendor/
+node_modules/
+test-results.xml
+.idea

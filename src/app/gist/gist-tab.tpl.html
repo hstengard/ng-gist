@@ -1,0 +1,9 @@
+<div class="tabbable">
+    <div class="tab-content" ng-transclude></div>
+    <ul class="nav nav-tabs">
+        <li ng-repeat="f in files" ng-class="{active:f.file.selected}">
+            <a hs-file-name-edit="" href="" ng-click="select(f)">{{f.file.filename}}</a>
+        </li>
+        <li class="git-link"><a ng-href="https://gist.github.com/{{user}}/{{id}}">View in GitHub</a></li>
+    </ul>
+</div>
